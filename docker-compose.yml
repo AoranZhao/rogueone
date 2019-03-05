@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  one:
+    image: aoran/node-dev:latest
+    restart: always
+    container_name: one
+    environment:
+      PORT: 8800
+    ports:
+      - 8000:8800
+    volumes:
+      - ./code:/code
+    entrypoint:
+      - nodemon
